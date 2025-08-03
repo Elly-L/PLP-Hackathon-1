@@ -6,24 +6,8 @@ A magical, responsive portfolio website showcasing full-stack development expert
 
 ## 🌟 Live Demo
 
-**[View Live Portfolio](https://your-portfolio-url.com)** *(Replace with actual URL)*
+**[View Live Portfolio](https://elly-odhiambo.netlify.app/)
 
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Sections](#sections)
-- [Design System](#design-system)
-- [Responsive Design](#responsive-design)
-- [Performance](#performance)
-- [Browser Support](#browser-support)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## 🎯 Overview
 
