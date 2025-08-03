@@ -9,7 +9,7 @@ A magical, responsive portfolio website showcasing full-stack development expert
 **[View Live Portfolio](https://elly-odhiambo.netlify.app/)
 
 
-## 🎯 Overview
+🎯 Overview
 
 This portfolio website represents a unique blend of professional development skills and creative design, featuring:
 
