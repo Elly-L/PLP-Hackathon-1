@@ -48,18 +48,8 @@ This portfolio website represents a unique blend of professional development ski
 
 ### Core Technologies
 - **HTML5** - Semantic markup and structure
-- **CSS3** - Advanced styling and animations
-- **Google Fonts** - Typography (Fredoka, JetBrains Mono)
+- ** Vanilla CSS** - Advanced styling and animations
 
-### CSS Features Utilized
-- **CSS Grid & Flexbox** - Modern layout systems
-- **CSS Custom Properties** - Consistent theming
-- **CSS Animations & Keyframes** - Motion design
-- **Media Queries** - Responsive breakpoints
-- **Pseudo-elements** - Enhanced visual effects
-- **Backdrop-filter** - Glassmorphism effects
-- **CSS Gradients** - Color transitions
-- **Transform & Transition** - Smooth interactions
 
 ### Design Principles
 - **Mobile-First Approach** - Progressive enhancement
