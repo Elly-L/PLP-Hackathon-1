@@ -1,12 +1,38 @@
+/* 
+===========================================
+ELLY ODHIAMBO - DIGITAL ALCHEMIST PORTFOLIO
+===========================================
+Professional Portfolio Website
+Author: Elly Odhiambo
+Version: 1.0
+Description: A magical, responsive portfolio showcasing full-stack development skills
+Technologies: HTML5, CSS3, Pure CSS Animations
+Browser Support: Modern browsers (Chrome, Firefox, Safari, Edge)
+Mobile: Fully responsive design
+===========================================
+*/
+
+/* Google Fonts Import - Professional typography */
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap");
 
+/* ===========================================
+   CSS RESET & BASE STYLES
+   =========================================== */
+
+/* Universal reset for consistent cross-browser styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===========================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   =========================================== */
+
+/* Color palette and design tokens for consistent theming */
 :root {
+  /* Primary Brand Colors */
   --cosmic-purple: #6366f1;
   --electric-blue: #3b82f6;
   --neon-green: #10b981;
@@ -15,37 +41,47 @@
   --deep-space: #0f172a;
   --stardust: #f8fafc;
 
-  /* Skill category colors */
-  --frontend-color: #61dafb;
-  --backend-color: #68d391;
-  --database-color: #f6ad55;
-  --cloud-color: #9f7aea;
-  --ai-color: #f093fb;
-  --blockchain-color: #ffd700;
-  --security-color: #ff6b6b;
-  --devops-color: #4ecdc4;
-  --tools-color: #a78bfa;
+  /* Skill Category Color Coding System */
+  --frontend-color: #61dafb; /* React/Frontend blue */
+  --backend-color: #68d391; /* Node.js green */
+  --database-color: #f6ad55; /* Database orange */
+  --cloud-color: #9f7aea; /* Cloud purple */
+  --ai-color: #f093fb; /* AI pink gradient */
+  --blockchain-color: #ffd700; /* Blockchain gold */
+  --security-color: #ff6b6b; /* Security red */
+  --devops-color: #4ecdc4; /* DevOps teal */
+  --tools-color: #a78bfa; /* Tools purple */
 }
 
+/* ===========================================
+   BODY & GLOBAL STYLES
+   =========================================== */
+
+/* Main body styling with cosmic background gradient */
 body {
   font-family: "Fredoka", cursive;
   background: linear-gradient(135deg, var(--deep-space) 0%, #1e293b 50%, var(--cosmic-purple) 100%);
   color: var(--stardust);
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scroll */
   line-height: 1.6;
 }
 
-/* Floating particles animation */
+/* ===========================================
+   FLOATING PARTICLES ANIMATION SYSTEM
+   =========================================== */
+
+/* Container for floating particle effects */
 .particles {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
-  z-index: 1;
+  pointer-events: none; /* Don't interfere with user interactions */
+  z-index: 1; /* Behind main content */
 }
 
+/* Individual particle styling */
 .particle {
   position: absolute;
   width: 4px;
@@ -55,6 +91,7 @@ body {
   animation: float 6s infinite ease-in-out;
 }
 
+/* Particle color variations and timing offsets */
 .particle:nth-child(2) {
   left: 20%;
   animation-delay: -1s;
@@ -76,6 +113,7 @@ body {
   background: var(--cosmic-purple);
 }
 
+/* Floating animation keyframes */
 @keyframes float {
   0%,
   100% {
@@ -91,21 +129,26 @@ body {
   }
 }
 
-/* Navigation - Mobile Optimized */
+/* ===========================================
+   NAVIGATION SYSTEM
+   =========================================== */
+
+/* Fixed navigation bar with glassmorphism effect */
 nav {
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000;
+  z-index: 1000; /* Above all other content */
   background: rgba(15, 23, 42, 0.9);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px); /* Glassmorphism effect */
   border-radius: 50px;
   padding: 12px 25px;
   border: 2px solid var(--cosmic-purple);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Navigation list styling */
 nav ul {
   list-style: none;
   display: flex;
@@ -114,10 +157,12 @@ nav ul {
   align-items: center;
 }
 
+/* Navigation list items */
 nav li {
   position: relative;
 }
 
+/* Navigation links with hover effects */
 nav a {
   color: var(--stardust);
   text-decoration: none;
@@ -130,39 +175,51 @@ nav a {
   position: relative;
 }
 
+/* Navigation hover effects */
 nav a:hover {
   background: var(--cosmic-purple);
   transform: scale(1.1);
   box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
 }
 
-/* Sections */
+/* ===========================================
+   SECTION LAYOUT SYSTEM
+   =========================================== */
+
+/* Base section styling for consistent spacing */
 section {
   min-height: 100vh;
   padding: 140px 20px 80px;
   position: relative;
-  z-index: 10;
+  z-index: 10; /* Above particles, below navigation */
 }
 
+/* Container for content width control */
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Hero Section */
+/* ===========================================
+   HERO SECTION
+   =========================================== */
+
+/* Main hero section layout */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
-  padding-top: 160px;
+  padding-top: 160px; /* Extra space for fixed navigation */
 }
 
+/* Hero content wrapper with entrance animation */
 .hero-content {
   animation: fadeInUp 1s ease-out;
 }
 
+/* Profile image with animated glow effect */
 .profile-image {
   width: 200px;
   height: 200px;
@@ -175,6 +232,7 @@ section {
   object-fit: cover;
 }
 
+/* Pulsing glow animation for profile image */
 @keyframes pulse {
   0%,
   100% {
@@ -185,6 +243,7 @@ section {
   }
 }
 
+/* Main heading with gradient text effect */
 .hero h1 {
   font-size: 4rem;
   font-weight: 700;
@@ -195,6 +254,7 @@ section {
   background-clip: text;
 }
 
+/* Secondary heading with matching gradient */
 .hero h2 {
   font-size: 3rem;
   font-weight: 700;
@@ -205,12 +265,14 @@ section {
   background-clip: text;
 }
 
+/* Subtitle styling */
 .hero .subtitle {
   font-size: 1.5rem;
   margin-bottom: 30px;
   color: var(--sunset-orange);
 }
 
+/* Main tagline paragraph */
 .hero .tagline {
   font-size: 1.2rem;
   opacity: 0.9;
@@ -218,12 +280,17 @@ section {
   margin: 0 auto;
 }
 
-/* About Section */
+/* ===========================================
+   ABOUT SECTION
+   =========================================== */
+
+/* About section with background overlay */
 .about {
   background: rgba(30, 41, 59, 0.3);
   backdrop-filter: blur(10px);
 }
 
+/* About section heading */
 .about h2 {
   font-size: 3rem;
   text-align: center;
@@ -231,6 +298,7 @@ section {
   color: var(--magic-pink);
 }
 
+/* Two-column grid layout for about content */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -238,15 +306,18 @@ section {
   align-items: center;
 }
 
+/* About text content styling */
 .about-text {
   font-size: 1.2rem;
   line-height: 1.8;
 }
 
+/* About image container */
 .about-image {
   text-align: center;
 }
 
+/* Animated frame for about image */
 .image-frame {
   position: relative;
   display: inline-block;
@@ -256,6 +327,7 @@ section {
   animation: gentleShake 3s ease-in-out infinite;
 }
 
+/* Inner frame effect */
 .image-frame::before {
   content: "";
   position: absolute;
@@ -268,6 +340,7 @@ section {
   z-index: 1;
 }
 
+/* About image styling */
 .image-frame img {
   position: relative;
   z-index: 2;
@@ -279,6 +352,7 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Gentle shake animation for image frame */
 @keyframes gentleShake {
   0%,
   100% {
@@ -295,7 +369,11 @@ section {
   }
 }
 
-/* Skills Section */
+/* ===========================================
+   SKILLS SECTION
+   =========================================== */
+
+/* Skills section heading */
 .skills h2 {
   font-size: 3rem;
   text-align: center;
@@ -303,12 +381,14 @@ section {
   color: var(--electric-blue);
 }
 
+/* Grid layout for skill categories */
 .skills-categories {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
+/* Individual skill category card */
 .skill-category {
   background: rgba(99, 102, 241, 0.1);
   border: 2px solid var(--cosmic-purple);
@@ -319,11 +399,13 @@ section {
   overflow: hidden;
 }
 
+/* Skill category hover effects */
 .skill-category:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
 }
 
+/* Skill category header layout */
 .category-header {
   display: flex;
   align-items: center;
@@ -331,23 +413,27 @@ section {
   margin-bottom: 20px;
 }
 
+/* Animated category icons */
 .category-icon {
   font-size: 2.5rem;
   animation: bounce 2s infinite ease-in-out;
 }
 
+/* Category heading styling */
 .category-header h3 {
   font-size: 1.5rem;
   color: var(--stardust);
   margin: 0;
 }
 
+/* Skills list container */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
+/* Base skill tag styling */
 .skill-tag {
   color: white;
   padding: 8px 16px;
@@ -359,56 +445,74 @@ section {
   border: 2px solid transparent;
 }
 
-/* Color-coded skill tags */
+/* ===========================================
+   SKILL TAG COLOR CODING SYSTEM
+   =========================================== */
+
+/* Frontend technologies - Blue theme */
 .skill-tag.frontend {
   background: linear-gradient(45deg, var(--frontend-color), #4fc3f7);
 }
 
+/* Backend technologies - Green theme */
 .skill-tag.backend {
   background: linear-gradient(45deg, var(--backend-color), #81c784);
 }
 
+/* Database technologies - Orange theme */
 .skill-tag.database {
   background: linear-gradient(45deg, var(--database-color), #ffb74d);
 }
 
+/* Cloud technologies - Purple theme */
 .skill-tag.cloud {
   background: linear-gradient(45deg, var(--cloud-color), #b39ddb);
 }
 
+/* AI/ML technologies - Pink theme */
 .skill-tag.ai {
   background: linear-gradient(45deg, var(--ai-color), #f48fb1);
 }
 
+/* Blockchain technologies - Gold theme */
 .skill-tag.blockchain {
   background: linear-gradient(45deg, var(--blockchain-color), #fff176);
-  color: #333;
+  color: #333; /* Dark text for better contrast on gold */
 }
 
+/* Security technologies - Red theme */
 .skill-tag.security {
   background: linear-gradient(45deg, var(--security-color), #ff8a80);
 }
 
+/* DevOps technologies - Teal theme */
 .skill-tag.devops {
   background: linear-gradient(45deg, var(--devops-color), #80cbc4);
 }
 
+/* Development tools - Purple theme */
 .skill-tag.tools {
   background: linear-gradient(45deg, var(--tools-color), #ce93d8);
 }
 
+/* Skill tag hover effects */
 .skill-tag:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-color: var(--stardust);
 }
 
-/* Projects Section */
+/* ===========================================
+   PROJECTS SECTION
+   =========================================== */
+
+/* Projects section with background overlay */
 .projects {
   background: rgba(30, 41, 59, 0.3);
   backdrop-filter: blur(10px);
 }
 
+/* Projects section heading */
 .projects h2 {
   font-size: 3rem;
   text-align: center;
@@ -416,12 +520,14 @@ section {
   color: var(--sunset-orange);
 }
 
+/* Grid layout for project cards */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
+/* Individual project card styling */
 .project-card {
   background: rgba(15, 23, 42, 0.9);
   border-radius: 20px;
@@ -431,17 +537,20 @@ section {
   position: relative;
 }
 
+/* Project card hover effects */
 .project-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3);
 }
 
+/* Project image container */
 .project-image-container {
   position: relative;
   height: 200px;
   overflow: hidden;
 }
 
+/* Project screenshot image */
 .project-image {
   width: 100%;
   height: 100%;
@@ -449,16 +558,19 @@ section {
   transition: transform 0.3s ease;
 }
 
+/* Image zoom effect on card hover */
 .project-card:hover .project-image {
   transform: scale(1.1);
 }
 
+/* Project status overlay */
 .project-overlay {
   position: absolute;
   top: 15px;
   right: 15px;
 }
 
+/* Project status badge */
 .project-status {
   background: rgba(0, 0, 0, 0.8);
   color: var(--stardust);
@@ -469,16 +581,19 @@ section {
   backdrop-filter: blur(10px);
 }
 
+/* Project content area */
 .project-content {
   padding: 25px;
 }
 
+/* Project title */
 .project-content h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: var(--stardust);
 }
 
+/* Project description */
 .project-content p {
   font-size: 1rem;
   line-height: 1.6;
@@ -486,6 +601,7 @@ section {
   opacity: 0.9;
 }
 
+/* Technology stack container */
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
@@ -493,6 +609,7 @@ section {
   margin-bottom: 20px;
 }
 
+/* Technology tag styling */
 .tech-tag {
   background: rgba(99, 102, 241, 0.2);
   color: var(--cosmic-purple);
@@ -503,13 +620,18 @@ section {
   border: 1px solid var(--cosmic-purple);
 }
 
+/* Project actions container */
 .project-actions {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-/* Dancing Buttons */
+/* ===========================================
+   DANCING BUTTON ANIMATION SYSTEM
+   =========================================== */
+
+/* Base dancing button styling */
 .dancing-btn {
   display: inline-block;
   padding: 12px 24px;
@@ -526,11 +648,13 @@ section {
   text-align: center;
 }
 
+/* Visit button specific styling */
 .dancing-btn.visit-btn {
   background: linear-gradient(45deg, var(--neon-green), var(--electric-blue));
   color: white;
 }
 
+/* Shimmer effect for buttons */
 .dancing-btn::before {
   content: "";
   position: absolute;
@@ -542,18 +666,20 @@ section {
   transition: left 0.5s ease;
 }
 
+/* Shimmer animation on hover */
 .dancing-btn:hover::before {
   left: 100%;
 }
 
+/* Button hover effects */
 .dancing-btn:hover {
   transform: translateY(-3px) scale(1.05);
-  animation: none;
+  animation: none; /* Stop dancing on hover */
   box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
   border-color: var(--stardust);
 }
 
-/* Dance Animation */
+/* Dance animation keyframes */
 @keyframes dance {
   0%,
   100% {
@@ -570,7 +696,11 @@ section {
   }
 }
 
-/* Contact Section */
+/* ===========================================
+   CONTACT SECTION
+   =========================================== */
+
+/* Contact section with background overlay */
 .contact {
   background: rgba(30, 41, 59, 0.3);
   backdrop-filter: blur(10px);
@@ -578,6 +708,7 @@ section {
   padding: 80px 20px;
 }
 
+/* Contact section heading */
 .contact h2 {
   font-size: 3rem;
   text-align: center;
@@ -585,18 +716,21 @@ section {
   color: var(--magic-pink);
 }
 
+/* Contact introduction content */
 .contact-intro {
   text-align: center;
   max-width: 700px;
   margin: 0 auto 50px;
 }
 
+/* Contact introduction paragraphs */
 .contact-intro p {
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 20px;
 }
 
+/* Contact section decorative image */
 .contact-image {
   width: 250px;
   height: 150px;
@@ -607,17 +741,23 @@ section {
   box-shadow: 0 15px 35px rgba(59, 130, 246, 0.3);
 }
 
+/* Warning text styling */
 .warning-text {
   font-style: italic;
   color: var(--sunset-orange);
 }
 
-/* Contact Form */
+/* ===========================================
+   CONTACT FORM SYSTEM
+   =========================================== */
+
+/* Contact form container */
 .contact-form-container {
   max-width: 800px;
   margin: 0 auto 50px;
 }
 
+/* Main form styling with glassmorphism */
 .magical-form {
   background: rgba(15, 23, 42, 0.8);
   border: 2px solid var(--cosmic-purple);
@@ -627,6 +767,7 @@ section {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
+/* Two-column grid for form fields */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -634,10 +775,12 @@ section {
   margin-bottom: 25px;
 }
 
+/* Form group container */
 .form-group {
   margin-bottom: 25px;
 }
 
+/* Form labels with emoji icons */
 .form-group label {
   display: block;
   color: var(--sunset-orange);
@@ -646,6 +789,7 @@ section {
   margin-bottom: 8px;
 }
 
+/* Form input fields styling */
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -660,6 +804,7 @@ section {
   transition: all 0.3s ease;
 }
 
+/* Form field focus effects */
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
@@ -669,23 +814,30 @@ section {
   transform: translateY(-2px);
 }
 
+/* Textarea specific styling */
 .form-group textarea {
   min-height: 120px;
   resize: vertical;
 }
 
+/* Placeholder text styling */
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: rgba(248, 250, 252, 0.6);
   font-style: italic;
 }
 
-/* Raven Button */
+/* ===========================================
+   RAVEN BUTTON (SUBMIT BUTTON)
+   =========================================== */
+
+/* Form actions container */
 .form-actions {
   text-align: center;
   margin-top: 30px;
 }
 
+/* Main raven submit button */
 .raven-btn {
   background: linear-gradient(45deg, var(--magic-pink), var(--cosmic-purple));
   color: white;
@@ -705,16 +857,19 @@ section {
   animation: ravenGlow 2s infinite ease-in-out;
 }
 
+/* Raven button hover effects */
 .raven-btn:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 15px 35px rgba(236, 72, 153, 0.4);
 }
 
+/* Raven icon animation */
 .raven-btn .btn-icon {
   font-size: 1.4rem;
   animation: fly 2s infinite ease-in-out;
 }
 
+/* Magic pulse effect for raven button */
 .raven-btn .btn-magic {
   position: absolute;
   top: 50%;
@@ -727,6 +882,7 @@ section {
   animation: magic-pulse 2s infinite ease-out;
 }
 
+/* Raven button glow animation */
 @keyframes ravenGlow {
   0%,
   100% {
@@ -737,6 +893,7 @@ section {
   }
 }
 
+/* Flying raven animation */
 @keyframes fly {
   0%,
   100% {
@@ -747,6 +904,7 @@ section {
   }
 }
 
+/* Magic pulse animation */
 @keyframes magic-pulse {
   0% {
     width: 0;
@@ -760,19 +918,25 @@ section {
   }
 }
 
-/* Alternative Contact Methods */
+/* ===========================================
+   ALTERNATIVE CONTACT METHODS
+   =========================================== */
+
+/* Alternative contact methods container */
 .contact-alternatives {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
 }
 
+/* Alternative methods heading */
 .contact-alternatives h3 {
   color: var(--electric-blue);
   font-size: 1.5rem;
   margin-bottom: 25px;
 }
 
+/* Contact methods button container */
 .contact-methods {
   display: flex;
   justify-content: center;
@@ -780,6 +944,7 @@ section {
   flex-wrap: wrap;
 }
 
+/* Base contact method button styling */
 .contact-method {
   background: linear-gradient(45deg, var(--electric-blue), var(--cosmic-purple));
   color: white;
@@ -791,11 +956,13 @@ section {
   font-size: 0.9rem;
 }
 
+/* Contact method hover effects */
 .contact-method:hover {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
 }
 
+/* Platform-specific button colors */
 .contact-method.linkedin {
   background: linear-gradient(45deg, #0077b5, #00a0dc);
 }
@@ -808,7 +975,11 @@ section {
   background: linear-gradient(45deg, var(--sunset-orange), var(--magic-pink));
 }
 
-/* Animations */
+/* ===========================================
+   GLOBAL ANIMATIONS
+   =========================================== */
+
+/* Fade in up animation for hero content */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -820,6 +991,7 @@ section {
   }
 }
 
+/* Bounce animation for icons */
 @keyframes bounce {
   0%,
   100% {
@@ -830,7 +1002,11 @@ section {
   }
 }
 
-/* Code font for special elements */
+/* ===========================================
+   UTILITY CLASSES
+   =========================================== */
+
+/* Code font styling for inline code elements */
 .code-font {
   font-family: "JetBrains Mono", monospace;
   background: rgba(0, 0, 0, 0.3);
@@ -839,21 +1015,26 @@ section {
   color: var(--neon-green);
 }
 
-/* Strategic Top Action Buttons */
+/* ===========================================
+   TOP ACTION BUTTONS SYSTEM
+   =========================================== */
+
+/* Container for strategic top buttons */
 .top-action-buttons {
   position: fixed;
   top: 100px;
   left: 0;
   right: 0;
-  z-index: 1001;
+  z-index: 1001; /* Above navigation */
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
-  pointer-events: none;
+  pointer-events: none; /* Allow clicks through container */
 }
 
+/* Base top button styling */
 .top-btn {
-  pointer-events: auto;
+  pointer-events: auto; /* Re-enable clicks on buttons */
   position: relative;
   display: flex;
   align-items: center;
@@ -871,28 +1052,33 @@ section {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* CV button specific styling */
 .cv-btn {
   background: linear-gradient(135deg, var(--sunset-orange), var(--magic-pink));
   color: white;
   border-color: var(--sunset-orange);
 }
 
+/* GitHub button specific styling */
 .github-btn {
   background: linear-gradient(135deg, var(--deep-space), var(--cosmic-purple));
   color: var(--stardust);
   border-color: var(--cosmic-purple);
 }
 
+/* Button icon styling */
 .btn-icon {
   font-size: 1.2rem;
   animation: bounce 1.5s infinite ease-in-out;
 }
 
+/* Button text styling */
 .btn-text {
   font-family: "Fredoka", cursive;
   white-space: nowrap;
 }
 
+/* Button pulse effect */
 .btn-pulse {
   position: absolute;
   top: 50%;
@@ -905,7 +1091,7 @@ section {
   animation: pulse-ring 2s infinite ease-out;
 }
 
-/* Shake animation for click-bait effect */
+/* Shake animation for attention-grabbing effect */
 @keyframes shake {
   0%,
   100% {
@@ -940,33 +1126,37 @@ section {
   }
 }
 
-/* Hover effects for top buttons */
+/* Top button hover effects */
 .top-btn:hover {
   transform: translateY(-3px) scale(1.05);
-  animation: none;
+  animation: none; /* Stop shaking on hover */
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
+/* CV button hover color change */
 .cv-btn:hover {
   background: linear-gradient(135deg, var(--magic-pink), var(--sunset-orange));
   border-color: var(--magic-pink);
 }
 
+/* GitHub button hover color change */
 .github-btn:hover {
   background: linear-gradient(135deg, var(--cosmic-purple), var(--electric-blue));
   border-color: var(--electric-blue);
 }
 
+/* Button icon hover effects */
 .top-btn:hover .btn-icon {
   animation: none;
   transform: scale(1.2);
 }
 
+/* Button active state */
 .top-btn:active {
   transform: translateY(-1px) scale(1.02);
 }
 
-/* Glowing effect */
+/* Shimmer effect for top buttons */
 .top-btn::before {
   content: "";
   position: absolute;
@@ -978,11 +1168,16 @@ section {
   transition: left 0.5s ease;
 }
 
+/* Shimmer animation on hover */
 .top-btn:hover::before {
   left: 100%;
 }
 
-/* Mobile Responsive Design */
+/* ===========================================
+   RESPONSIVE DESIGN - MOBILE OPTIMIZATION
+   =========================================== */
+
+/* Tablet and Mobile Devices (768px and below) */
 @media (max-width: 768px) {
   /* Navigation - Mobile Optimized */
   nav {
@@ -1000,7 +1195,7 @@ section {
     font-size: 1.1rem;
   }
 
-  /* Top Action Buttons - Mobile */
+  /* Top Action Buttons - Mobile Layout */
   .top-action-buttons {
     position: relative;
     top: 0;
@@ -1017,6 +1212,7 @@ section {
     padding: 10px 16px;
   }
 
+  /* Hide button text on mobile, show only icons */
   .btn-text {
     display: none;
   }
@@ -1025,7 +1221,7 @@ section {
     font-size: 1.5rem;
   }
 
-  /* Hero Section - Mobile */
+  /* Hero Section - Mobile Adjustments */
   .hero {
     padding-top: 120px;
   }
@@ -1051,7 +1247,7 @@ section {
     height: 150px;
   }
 
-  /* About Section - Mobile */
+  /* About Section - Mobile Layout */
   .about-grid {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -1070,7 +1266,7 @@ section {
     height: 250px;
   }
 
-  /* Skills Section - Mobile */
+  /* Skills Section - Mobile Layout */
   .skills h2 {
     font-size: 2.5rem;
   }
@@ -1092,7 +1288,7 @@ section {
     font-size: 1.3rem;
   }
 
-  /* Projects Section - Mobile */
+  /* Projects Section - Mobile Layout */
   .projects h2 {
     font-size: 2.5rem;
   }
@@ -1106,7 +1302,7 @@ section {
     padding: 20px;
   }
 
-  /* Contact Section - Mobile */
+  /* Contact Section - Mobile Layout */
   .contact h2 {
     font-size: 2.5rem;
   }
@@ -1172,7 +1368,7 @@ section {
   }
 }
 
-/* Extra Small Mobile Devices */
+/* Extra Small Mobile Devices (480px and below) */
 @media (max-width: 480px) {
   nav {
     padding: 6px 10px;
@@ -1212,7 +1408,7 @@ section {
   }
 }
 
-/* Large Mobile Devices */
+/* Large Mobile Devices and Tablets (769px to 992px) */
 @media (max-width: 992px) and (min-width: 769px) {
   .skills-categories {
     grid-template-columns: repeat(2, 1fr);
@@ -1222,3 +1418,7 @@ section {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ===========================================
+   END OF STYLESHEET
+   =========================================== */
