@@ -16,9 +16,52 @@
         </a>
         <a href="https://github.com/Elly-L/" target="_blank" class="top-btn github-btn">
             <span class="btn-icon">🐙</span>
-            <span class="btn-text">View Code!</span>
+            <span class="btn-text">Visit GitHub!</span>
             <span class="btn-pulse"></span>
         </a>
+    </div>
+    
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📡 Let's Create Magic Together!</h2>
+                <span class="close-btn" onclick="closeContactModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">🧙‍♂️ Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="What should I call you?">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">✉️ Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Where can I send my digital owl?">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">🎯 Project Type</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Choose your adventure...</option>
+                            <option value="web-development">🌐 Web Development Magic</option>
+                            <option value="ai-ml">🤖 AI/ML Wizardry</option>
+                            <option value="blockchain">⛓️ Blockchain Sorcery</option>
+                            <option value="cybersecurity">🛡️ Cybersecurity Shield</option>
+                            <option value="consultation">💡 Tech Consultation</option>
+                            <option value="other">🌟 Something Extraordinary</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">💭 Your Vision</label>
+                        <textarea id="message" name="message" required placeholder="Tell me about your dream project! What magic do you want to create?"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn dancing-btn">
+                            🚀 Send Message to the Digital Realm
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
     
     <!-- Floating Particles -->
@@ -77,7 +120,7 @@
                     </p>
                 </div>
                 <div class="about-image">
-                    <img src="images/creative-workspace.png" alt="Creative Digital Workspace">
+                    <img src="images/profile-photo.png" alt="Elly Odhiambo - The Digital Alchemist">
                 </div>
             </div>
         </div>
@@ -87,36 +130,114 @@
     <section id="skills" class="skills">
         <div class="container">
             <h2>⚡ My Superpowers</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <h3>Frontend Wizardry</h3>
-                    <p>Crafting pixel-perfect interfaces that make users go "Wow!" using React, Vue, and the ancient arts of HTML & CSS.</p>
+            <div class="skills-categories">
+                
+                <!-- Frontend Skills -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">🎨</div>
+                        <h3>Frontend Wizardry</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">SASS</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">⚙️</div>
-                    <h3>Backend Sorcery</h3>
-                    <p>Building robust server-side magic with Node.js, Python, and databases that never sleep (unlike me during deployment nights).</p>
+
+                <!-- Backend Skills -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">⚙️</div>
+                        <h3>Backend Sorcery</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">GraphQL</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🚀</div>
-                    <h3>Performance Alchemy</h3>
-                    <p>Turning slow websites into lightning-fast experiences. I make loading screens obsolete and users happy.</p>
+
+                <!-- Database & Cloud -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">🗄️</div>
+                        <h3>Data Alchemy</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Supabase</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Netlify</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🎭</div>
-                    <h3>UX Mind Reading</h3>
-                    <p>Understanding what users want before they know it themselves. It's not magic, it's just really good UX research (okay, maybe it's a little magic).</p>
+
+                <!-- AI & Blockchain -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">🤖</div>
+                        <h3>Future Tech Magic</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">AI/ML</span>
+                        <span class="skill-tag">Solidity</span>
+                        <span class="skill-tag">Blockchain</span>
+                        <span class="skill-tag">Smart Contracts</span>
+                        <span class="skill-tag">Web3</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">TensorFlow</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🔧</div>
-                    <h3>DevOps Mastery</h3>
-                    <p>Deploying applications with the precision of a Swiss watch and the reliability of your favorite coffee shop's WiFi.</p>
+
+                <!-- Cybersecurity -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">🛡️</div>
+                        <h3>Security Mastery</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Penetration Testing</span>
+                        <span class="skill-tag">Vulnerability Assessment</span>
+                        <span class="skill-tag">Digital Forensics</span>
+                        <span class="skill-tag">Linux Hardening</span>
+                        <span class="skill-tag">Threat Modeling</span>
+                        <span class="skill-tag">Burp Suite</span>
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">Metasploit</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🧠</div>
-                    <h3>Problem Solving</h3>
-                    <p>Debugging code like Sherlock Holmes solves mysteries—with style, precision, and an occasional "Elementary, my dear Watson!"</p>
+
+                <!-- Tools & DevOps -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">🔧</div>
+                        <h3>DevOps Arsenal</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Bash Scripting</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Hardhat</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,70 +247,162 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2>🌌 Digital Creations</h2>
-        
-            <div class="project-card">
-                <h3>🏥 AbiCare AI</h3>
-                <p>
-                    A revolutionary healthcare companion that doesn't just diagnose—it cares with artificial empathy! 
-                    This AI-powered medical assistant combines the wisdom of a thousand doctors with the bedside manner of your favorite nurse. 
-                    It's like having WebMD, but actually helpful and way less likely to convince you that your headache is a rare tropical disease.
-                </p>
-                <p><strong>Tech Stack:</strong> <span class="code-font">AI/ML • Healthcare APIs • Compassionate Algorithms</span></p>
-                <a href="https://abi-care-ai.netlify.app/" target="_blank" class="visit-btn">🚀 Experience the Magic</a>
-            </div>
-        
-            <div class="project-card">
-                <h3>🎉 Herina Events & Decor</h3>
-                <p>
-                    Where dreams meet reality and ordinary spaces transform into extraordinary experiences! 
-                    This isn't just an events website—it's a portal to a world where every celebration becomes a masterpiece. 
-                    From intimate gatherings to grand galas, Herina turns "I do" into "I can't believe this is real!"
-                </p>
-                <p><strong>Tech Stack:</strong> <span class="code-font">React • Event Magic • Aesthetic Wizardry</span></p>
-                <a href="https://herina.netlify.app/" target="_blank" class="visit-btn">✨ Enter the Wonderland</a>
-            </div>
-        
-            <div class="project-card">
-                <h3>🧠 SkillsSync AI</h3>
-                <p>
-                    The career matchmaker that actually understands you! This AI-powered platform doesn't just match skills to jobs—it reads between the lines of your resume and whispers sweet career opportunities into your ear. 
-                    It's like having a career counselor, life coach, and fortune teller all rolled into one incredibly smart algorithm.
-                </p>
-                <p><strong>Tech Stack:</strong> <span class="code-font">AI/ML • Career Psychology • Future Prediction APIs</span></p>
-                <a href="https://skillssync-ai.netlify.app/" target="_blank" class="visit-btn">🎯 Sync Your Destiny</a>
-            </div>
-        
-            <div class="project-card">
-                <h3>💰 ShilingiX</h3>
-                <p>
-                    The financial platform that makes money management feel like a game you actually want to play! 
-                    ShilingiX transforms the boring world of budgets and transactions into an adventure where every shilling counts and every financial decision feels like leveling up. 
-                    It's personal finance, but make it fun (and actually understandable).
-                </p>
-                <p><strong>Tech Stack:</strong> <span class="code-font">FinTech APIs • Gamification • Money Magic</span></p>
-                <a href="https://shilingix.netlify.app/" target="_blank" class="visit-btn">💎 Level Up Your Finances</a>
-            </div>
-        
-            <div class="project-card">
-                <h3>🥾 Boots & Backpacks</h3>
-                <p>
-                    For the wanderers, the dreamers, and the "I'll sleep when I'm dead" adventurers! 
-                    This isn't just a travel platform—it's your digital compass to experiences that Instagram can't capture. 
-                    From mountain peaks to hidden valleys, Boots & Backpacks connects you with adventures that make your office cubicle seem like a distant memory.
-                </p>
-                <p><strong>Tech Stack:</strong> <span class="code-font">Travel APIs • Adventure Algorithms • Wanderlust Engine</span></p>
-                <a href="https://boots-backpacks.netlify.app/" target="_blank" class="visit-btn">🗺️ Start Your Adventure</a>
-            </div>
-        
-            <div class="project-card">
-                <h3>🎮 Game Logania</h3>
-                <p>
-                    Welcome to the digital realm where pixels meet passion and high scores become legendary tales! 
-                    Logania isn't just a game—it's an entire universe where logic puzzles dance with creativity and every level conquered feels like discovering a new continent. 
-                    Warning: May cause severe addiction to problem-solving and an irresistible urge to say "just one more level."
-                </p>
-                <p><strong>Tech Stack:</strong> <span class="code-font">Game Engine • Logic Puzzles • Addictive Mechanics</span></p>
-                <a href="https://logania.netlify.app/" target="_blank" class="visit-btn">🎯 Enter the Game</a>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="images/projects/abicare-screenshot.png" alt="AbiCare AI Screenshot" class="project-image">
+                        <div class="project-overlay">
+                            <span class="project-status">🔥 Live</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>🏥 AbiCare AI</h3>
+                        <p>
+                            A revolutionary healthcare companion that doesn't just diagnose—it cares with artificial empathy! 
+                            This AI-powered medical assistant combines the wisdom of a thousand doctors with the bedside manner of your favorite nurse.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Healthcare APIs</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://abi-care-ai.netlify.app/" target="_blank" class="dancing-btn visit-btn">
+                                🚀 Experience the Magic
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="images/projects/herina-screenshot.png" alt="Herina Events Screenshot" class="project-image">
+                        <div class="project-overlay">
+                            <span class="project-status">✨ Featured</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>🎉 Herina Events & Decor</h3>
+                        <p>
+                            Where dreams meet reality and ordinary spaces transform into extraordinary experiences! 
+                            This isn't just an events website—it's a portal to a world where every celebration becomes a masterpiece.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Event Magic</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://herina.netlify.app/" target="_blank" class="dancing-btn visit-btn">
+                                ✨ Enter the Wonderland
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="images/projects/skillssync-screenshot.png" alt="SkillsSync AI Screenshot" class="project-image">
+                        <div class="project-overlay">
+                            <span class="project-status">🧠 AI-Powered</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>🧠 SkillsSync AI</h3>
+                        <p>
+                            The career matchmaker that actually understands you! This AI-powered platform doesn't just match skills to jobs—it reads between the lines of your resume and whispers sweet career opportunities.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Career Psychology</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://skillssync-ai.netlify.app/" target="_blank" class="dancing-btn visit-btn">
+                                🎯 Sync Your Destiny
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="images/projects/shilingix-screenshot.png" alt="ShilingiX Screenshot" class="project-image">
+                        <div class="project-overlay">
+                            <span class="project-status">🏆 Award Winner</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>💰 ShilingiX</h3>
+                        <p>
+                            The financial platform that makes money management feel like a game you actually want to play! 
+                            ShilingiX transforms the boring world of budgets and transactions into an adventure where every shilling counts.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">FinTech</span>
+                            <span class="tech-tag">Blockchain</span>
+                            <span class="tech-tag">Solidity</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://shilingix.netlify.app/" target="_blank" class="dancing-btn visit-btn">
+                                💎 Level Up Your Finances
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="images/projects/boots-screenshot.png" alt="Boots & Backpacks Screenshot" class="project-image">
+                        <div class="project-overlay">
+                            <span class="project-status">🗺️ Adventure</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>🥾 Boots & Backpacks</h3>
+                        <p>
+                            For the wanderers, the dreamers, and the "I'll sleep when I'm dead" adventurers! 
+                            This isn't just a travel platform—it's your digital compass to experiences that Instagram can't capture.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Travel APIs</span>
+                            <span class="tech-tag">Adventure Algorithms</span>
+                            <span class="tech-tag">Vue.js</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://boots-backpacks.netlify.app/" target="_blank" class="dancing-btn visit-btn">
+                                🗺️ Start Your Adventure
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="images/projects/logania-screenshot.png" alt="Game Logania Screenshot" class="project-image">
+                        <div class="project-overlay">
+                            <span class="project-status">🎮 Gaming</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>🎮 Game Logania</h3>
+                        <p>
+                            Welcome to the digital realm where pixels meet passion and high scores become legendary tales! 
+                            Logania isn't just a game—it's an entire universe where logic puzzles dance with creativity.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Game Engine</span>
+                            <span class="tech-tag">Logic Puzzles</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://logania.netlify.app/" target="_blank" class="dancing-btn visit-btn">
+                                🎯 Enter the Game
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -213,21 +426,21 @@
                 </p>
                 
                 <div class="contact-methods">
-                    <a href="mailto:hello@ellyodhiambo.dev" class="contact-method">
+                    <button onclick="openContactModal()" class="contact-method contact-me-btn">
+                        📧 Contact Me Now!
+                    </button>
+                    <a href="mailto:ellyodhiambo6896@gmail.com" class="contact-method">
                         ✉️ Send Digital Owl
                     </a>
-                    <a href="https://linkedin.com/in/ellyodhiambo" class="contact-method">
+                    <a href="https://linkedin.com/in/elly-odhiambo-422125293" class="contact-method">
                         💼 Professional Portal
                     </a>
                     <a href="https://github.com/Elly-L/" target="_blank" class="contact-method">
                         🐙 Code Repository
                     </a>
-                    <a href="images/Elly_Odhiambo_CV.pdf" download="Elly_Odhiambo_CV.pdf" class="contact-method">
+                    <a href="cv/Elly_Odhiambo_CV.pdf" download="Elly_Odhiambo_CV.pdf" class="contact-method">
                         📄 Download CV Scroll
                     </a>
-                    <button class="contact-method" onclick="alert('🎉 Surprise! You found the secret button! Email me and mention this for a special project discount!')">
-                        🎁 Mystery Button
-                    </button>
                 </div>
             </div>
         </div>
