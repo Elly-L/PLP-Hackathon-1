@@ -6,7 +6,7 @@ A magical, responsive portfolio website showcasing full-stack development expert
 
 ## 🌟 Live Demo
 
-**[View Live Portfolio](https://elly-odhiambo.netlify.app/)
+[View Live Portfolio](https://elly-odhiambo.netlify.app/)
 
 
 🎯 Overview
