@@ -1,16 +1,4 @@
-/* 
-===========================================
-ELLY ODHIAMBO - DIGITAL ALCHEMIST PORTFOLIO
-===========================================
-Professional Portfolio Website
-Author: Elly Odhiambo
-Version: 1.0
-Description: A magical, responsive portfolio showcasing full-stack development skills
-Technologies: HTML5, CSS3, Pure CSS Animations
-Browser Support: Modern browsers (Chrome, Firefox, Safari, Edge)
-Mobile: Fully responsive design
-===========================================
-*/
+
 
 /* Google Fonts Import - Professional typography */
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap");
@@ -1197,28 +1185,53 @@ section {
 
   /* Top Action Buttons - Mobile Layout */
   .top-action-buttons {
-    position: relative;
-    top: 0;
+    position: fixed;
+    top: 20px;
     left: 0;
-    margin: 20px;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    right: 0;
+    z-index: 1001;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    pointer-events: none;
   }
 
   .top-btn {
-    font-size: 0.8rem;
-    padding: 10px 16px;
+    pointer-events: auto;
+    font-size: 0.75rem;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    min-width: 60px;
+    text-align: center;
   }
 
-  /* Hide button text on mobile, show only icons */
+  /* Show button text on mobile with smaller font */
   .btn-text {
-    display: none;
+    display: block;
+    font-size: 0.7rem;
+    line-height: 1;
+    font-weight: 600;
   }
 
   .btn-icon {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  /* Position CV button on the left */
+  .cv-btn {
+    background: linear-gradient(135deg, var(--sunset-orange), var(--magic-pink));
+    color: white;
+    border-color: var(--sunset-orange);
+  }
+
+  /* Position GitHub button on the right */
+  .github-btn {
+    background: linear-gradient(135deg, var(--deep-space), var(--cosmic-purple));
+    color: var(--stardust);
+    border-color: var(--cosmic-purple);
   }
 
   /* Hero Section - Mobile Adjustments */
@@ -1370,8 +1383,10 @@ section {
 
 /* Extra Small Mobile Devices (480px and below) */
 @media (max-width: 480px) {
+  /* Adjust navigation to account for top buttons */
   nav {
     padding: 6px 10px;
+    top: 80px; /* Move nav down to avoid button overlap */
   }
 
   nav ul {
@@ -1381,6 +1396,11 @@ section {
   nav a {
     padding: 6px 8px;
     font-size: 1rem;
+  }
+
+  /* Adjust hero section padding for button space */
+  .hero {
+    padding-top: 140px;
   }
 
   .hero h1 {
@@ -1405,6 +1425,20 @@ section {
   .raven-btn {
     padding: 12px 25px;
     font-size: 0.9rem;
+  }
+
+  /* Make top buttons even more compact on very small screens */
+  .top-btn {
+    padding: 6px 8px;
+    min-width: 50px;
+  }
+
+  .btn-text {
+    font-size: 0.65rem;
+  }
+
+  .btn-icon {
+    font-size: 1rem;
   }
 }
 
