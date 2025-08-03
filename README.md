@@ -48,7 +48,7 @@ This portfolio website represents a unique blend of professional development ski
 
 ### Core Technologies
 - **HTML5** - Semantic markup and structure
-- ** Vanilla CSS** - Advanced styling and animations
+- **Vanilla CSS** - Advanced styling and animations
 
 
 ### Design Principles
