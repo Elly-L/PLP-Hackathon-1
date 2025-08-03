@@ -79,7 +79,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   const message = formData.get("message")
 
   // Create mailto link
-  const mailtoLink = `mailto:ellyodhiambo6896@gmail.com?subject=${encodeURIComponent(subject + " - From " + name)}&body=${encodeURIComponent(
+  const mailtoLink = `mailto:ellylog.el@proton.me?subject=${encodeURIComponent(subject + " - From " + name)}&body=${encodeURIComponent(
     `Hello Elly!\n\nName: ${name}\nEmail: ${email}\nProject Type: ${subject}\n\nMessage:\n${message}\n\nSent from your magical portfolio website! ✨`,
   )}`
 
@@ -88,7 +88,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
   // Show success message
   showCenteredAlert(
-    "🎉 Your message is ready to send! Your email client should open shortly. If it doesn't, please copy the details and send manually to ellyodhiambo6896@gmail.com",
+    "🎉 Your message is ready to send! Your email client should open shortly. If it doesn't, please copy the details and send manually to ellylog.el@proton.me",
   )
 
   // Close modal after a delay
