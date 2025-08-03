@@ -68,6 +68,6 @@ This portfolio website represents a unique blend of professional development ski
 
 
 
-**Made with ❤️ and lots of ☕ by Elly Odhiambo**
+**Made with ❤️ and lots of ☕ by Elly Odhiambo For PLP Hackathon one**
 
 *"Every line of code should spark joy, every user interaction should feel like magic, and every bug is just an undocumented feature waiting to be discovered."*
