@@ -9,7 +9,7 @@
 <body>
     <!-- Strategic Top Buttons -->
     <div class="top-action-buttons">
-        <a href="./cv/Elly Odhiambo CV.pdf" download="Elly_Odhiambo_CV.pdf" class="top-btn cv-btn">
+        <a href="./cv/Elly Odhiambo CV.pdf" target="_blank" class="top-btn cv-btn">
             <span class="btn-icon">📄</span>
             <span class="btn-text">Get My CV!</span>
             <span class="btn-pulse"></span>
@@ -19,49 +19,6 @@
             <span class="btn-text">Visit GitHub!</span>
             <span class="btn-pulse"></span>
         </a>
-    </div>
-    
-    <!-- Contact Modal -->
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>📡 Let's Create Magic Together!</h2>
-                <span class="close-btn" onclick="closeContactModal()">&times;</span>
-            </div>
-            <div class="modal-body">
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">🧙‍♂️ Your Name</label>
-                        <input type="text" id="name" name="name" required placeholder="What should I call you?">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">✉️ Your Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Where can I send my digital raven?">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">🎯 Project Type</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">Choose your adventure...</option>
-                            <option value="web-development">🌐 Web Development Magic</option>
-                            <option value="ai-ml">🤖 AI/ML Wizardry</option>
-                            <option value="blockchain">⛓️ Blockchain Sorcery</option>
-                            <option value="cybersecurity">🛡️ Cybersecurity Shield</option>
-                            <option value="consultation">💡 Tech Consultation</option>
-                            <option value="other">🌟 Something Extraordinary</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">💭 Your Vision</label>
-                        <textarea id="message" name="message" required placeholder="Tell me about your dream project! What magic do you want to create?"></textarea>
-                    </div>
-                    <div class="form-actions">
-                        <button type="submit" class="submit-btn dancing-btn">
-                            🚀 Send Message to the Digital Realm
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
     </div>
     
     <!-- Floating Particles -->
@@ -76,11 +33,11 @@
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#home">🏠 Base</a></li>
-            <li><a href="#about">🧙‍♂️ Origin Story</a></li>
-            <li><a href="#skills">⚡ Superpowers</a></li>
-            <li><a href="#projects">🌌 Creations</a></li>
-            <li><a href="#contact">📡 Signal</a></li>
+            <li><a href="#home">🏠</a></li>
+            <li><a href="#about">🧙‍♂️</a></li>
+            <li><a href="#skills">⚡</a></li>
+            <li><a href="#projects">🌌</a></li>
+            <li><a href="#contact">📡</a></li>
         </ul>
     </nav>
     
@@ -88,7 +45,7 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <img src="images/profile-photo.png" alt="Elly Odhiambo - The Digital Alchemist" class="profile-image">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Uj1hILizzmSzweX0PYT5lIUW0YGarF.png" alt="Elly Odhiambo - The Digital Alchemist" class="profile-image">
                 <h1>Elly Odhiambo</h1>
                 <h2>The Digital Alchemist</h2>
                 <p class="subtitle">Code Conjurer & Reality Hacker</p>
@@ -112,7 +69,7 @@
                     </p>
                     <br>
                     <p>
-                        🎓 <strong>Academic Adventures:</strong> Graduated from JKUAT with a degree in "Information & Technology" (officially known as Computer Science, but where's the fun in that?).
+                        🎓 <strong>Academic Adventures:</strong> Graduated from the Jommo Kenyatta University  with a degree in "Making Computers Do Cool Stuff" (officially known as Information and Technology, but where's the fun in that?)..
                     </p>
                     <br>
                     <p>
@@ -120,7 +77,9 @@
                     </p>
                 </div>
                 <div class="about-image">
-                    <img src="images/profile-photo.png" alt="Elly Odhiambo - The Digital Alchemist">
+                    <div class="image-frame">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Uj1hILizzmSzweX0PYT5lIUW0YGarF.png" alt="Elly Odhiambo - The Digital Alchemist">
+                    </div>
                 </div>
             </div>
         </div>
@@ -139,14 +98,14 @@
                         <h3>Frontend Wizardry</h3>
                     </div>
                     <div class="skills-list">
-                        <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">Vue.js</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">SASS</span>
+                        <span class="skill-tag frontend">React.js</span>
+                        <span class="skill-tag frontend">Vue.js</span>
+                        <span class="skill-tag frontend">JavaScript</span>
+                        <span class="skill-tag frontend">TypeScript</span>
+                        <span class="skill-tag frontend">HTML5</span>
+                        <span class="skill-tag frontend">CSS3</span>
+                        <span class="skill-tag frontend">Tailwind CSS</span>
+                        <span class="skill-tag frontend">SASS</span>
                     </div>
                 </div>
 
@@ -157,14 +116,14 @@
                         <h3>Backend Sorcery</h3>
                     </div>
                     <div class="skills-list">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Django</span>
-                        <span class="skill-tag">PHP</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">RESTful APIs</span>
-                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag backend">Node.js</span>
+                        <span class="skill-tag backend">Python</span>
+                        <span class="skill-tag backend">Django</span>
+                        <span class="skill-tag backend">PHP</span>
+                        <span class="skill-tag backend">Java</span>
+                        <span class="skill-tag backend">C++</span>
+                        <span class="skill-tag backend">RESTful APIs</span>
+                        <span class="skill-tag backend">GraphQL</span>
                     </div>
                 </div>
 
@@ -175,14 +134,14 @@
                         <h3>Data Alchemy</h3>
                     </div>
                     <div class="skills-list">
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">Supabase</span>
-                        <span class="skill-tag">Firebase</span>
-                        <span class="skill-tag">Redis</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Netlify</span>
+                        <span class="skill-tag database">MongoDB</span>
+                        <span class="skill-tag database">PostgreSQL</span>
+                        <span class="skill-tag database">MySQL</span>
+                        <span class="skill-tag database">Supabase</span>
+                        <span class="skill-tag database">Firebase</span>
+                        <span class="skill-tag database">Redis</span>
+                        <span class="skill-tag cloud">AWS</span>
+                        <span class="skill-tag cloud">Netlify</span>
                     </div>
                 </div>
 
@@ -193,14 +152,14 @@
                         <h3>Future Tech Magic</h3>
                     </div>
                     <div class="skills-list">
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">AI/ML</span>
-                        <span class="skill-tag">Solidity</span>
-                        <span class="skill-tag">Blockchain</span>
-                        <span class="skill-tag">Smart Contracts</span>
-                        <span class="skill-tag">Web3</span>
-                        <span class="skill-tag">scikit-learn</span>
-                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag ai">Machine Learning</span>
+                        <span class="skill-tag ai">AI/ML</span>
+                        <span class="skill-tag blockchain">Solidity</span>
+                        <span class="skill-tag blockchain">Blockchain</span>
+                        <span class="skill-tag blockchain">Smart Contracts</span>
+                        <span class="skill-tag blockchain">Web3</span>
+                        <span class="skill-tag ai">scikit-learn</span>
+                        <span class="skill-tag ai">TensorFlow</span>
                     </div>
                 </div>
 
@@ -211,14 +170,14 @@
                         <h3>Security Mastery</h3>
                     </div>
                     <div class="skills-list">
-                        <span class="skill-tag">Penetration Testing</span>
-                        <span class="skill-tag">Vulnerability Assessment</span>
-                        <span class="skill-tag">Digital Forensics</span>
-                        <span class="skill-tag">Linux Hardening</span>
-                        <span class="skill-tag">Threat Modeling</span>
-                        <span class="skill-tag">Burp Suite</span>
-                        <span class="skill-tag">Wireshark</span>
-                        <span class="skill-tag">Metasploit</span>
+                        <span class="skill-tag security">Penetration Testing</span>
+                        <span class="skill-tag security">Vulnerability Assessment</span>
+                        <span class="skill-tag security">Digital Forensics</span>
+                        <span class="skill-tag security">Linux Hardening</span>
+                        <span class="skill-tag security">Threat Modeling</span>
+                        <span class="skill-tag security">Burp Suite</span>
+                        <span class="skill-tag security">Wireshark</span>
+                        <span class="skill-tag security">Metasploit</span>
                     </div>
                 </div>
 
@@ -229,14 +188,14 @@
                         <h3>DevOps Arsenal</h3>
                     </div>
                     <div class="skills-list">
-                        <span class="skill-tag">Git & GitHub</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Bash Scripting</span>
-                        <span class="skill-tag">CI/CD</span>
-                        <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">Hardhat</span>
+                        <span class="skill-tag devops">Git & GitHub</span>
+                        <span class="skill-tag devops">Docker</span>
+                        <span class="skill-tag devops">Linux</span>
+                        <span class="skill-tag devops">Bash Scripting</span>
+                        <span class="skill-tag devops">CI/CD</span>
+                        <span class="skill-tag tools">VS Code</span>
+                        <span class="skill-tag tools">Figma</span>
+                        <span class="skill-tag blockchain">Hardhat</span>
                     </div>
                 </div>
             </div>
@@ -251,7 +210,7 @@
                 
                 <div class="project-card">
                     <div class="project-image-container">
-                        <img src="images/projects/abicare-screenshot.png" alt="AbiCare AI Screenshot" class="project-image">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-fTzwoLWikxMzwr0gpst8BVP985sa9S.png" alt="AbiCare AI Screenshot" class="project-image">
                         <div class="project-overlay">
                             <span class="project-status">🔥 Live</span>
                         </div>
@@ -286,7 +245,7 @@
 
                 <div class="project-card">
                     <div class="project-image-container">
-                        <img src="images/projects/herina-screenshot.png" alt="Herina Events Screenshot" class="project-image">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Jq74PmEQiuGDjWJBrha64hhXHcCQGH.png" alt="Herina Events Screenshot" class="project-image">
                         <div class="project-overlay">
                             <span class="project-status">✨ Featured</span>
                         </div>
@@ -320,7 +279,7 @@
 
                 <div class="project-card">
                     <div class="project-image-container">
-                        <img src="images/projects/skillssync-screenshot.png" alt="SkillsSync AI Screenshot" class="project-image">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8VZcodPWTaChmUZRJGwUh0ndJpdDul.png" alt="SkillsSync AI Screenshot" class="project-image">
                         <div class="project-overlay">
                             <span class="project-status">🧠 AI-Powered</span>
                         </div>
@@ -354,7 +313,7 @@
 
                 <div class="project-card">
                     <div class="project-image-container">
-                        <img src="images/projects/shilingix-screenshot.png" alt="ShilingiX Screenshot" class="project-image">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Llqh1zj6bdrHRjuNSCCCXhp2Z0Oo2Y.png" alt="ShilingiX Screenshot" class="project-image">
                         <div class="project-overlay">
                             <span class="project-status">🏆 Award Winner</span>
                         </div>
@@ -389,7 +348,7 @@
 
                 <div class="project-card">
                     <div class="project-image-container">
-                        <img src="images/projects/boots-screenshot.png" alt="Boots & Backpacks Screenshot" class="project-image">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-DR1xuMK3OzGAQxZoeM5W96xpLj4EuB.png" alt="Boots & Backpacks Screenshot" class="project-image">
                         <div class="project-overlay">
                             <span class="project-status">🗺️ Adventure</span>
                         </div>
@@ -424,7 +383,7 @@
 
                 <div class="project-card">
                     <div class="project-image-container">
-                        <img src="images/projects/logania-screenshot.png" alt="Game Logania Screenshot" class="project-image">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kqlqos3G0Ol12EZDOmKh2d9tOgHhNE.png" alt="Game Logania Screenshot" class="project-image">
                         <div class="project-overlay">
                             <span class="project-status">🎮 Gaming</span>
                         </div>
@@ -463,42 +422,82 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>📡 Open Communication Channel</h2>
-            <div class="contact-content">
+            <h2>🐦‍ Summon the Digital Raven</h2>
+            <div class="contact-intro">
                 <p>
                     Ready to embark on a digital adventure together? Whether you need a website that defies gravity, 
                     an app that reads minds, or just want to chat about the philosophical implications of semicolons in JavaScript, 
-                    I'm just a message away!
+                    let's conjure some magic together!
                 </p>
                 
-                <img src="images/contact-portal.png" alt="Communication Portal" class="contact-image">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zHGxRtBTglHZ5MWTJbbi3I2ODjOfDo.png" alt="Satellite Communication" class="contact-image">
                 
-                <p>
-                    <strong>Warning:</strong> Contacting me may result in excessive enthusiasm about your project, 
+                <p class="warning-text">
+                    <strong>⚠️ Warning:</strong> Contacting me may result in excessive enthusiasm about your project, 
                     spontaneous brainstorming sessions, and the creation of something absolutely amazing.
                 </p>
-                
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <form class="magical-form" action="mailto:ellylog.el@proton.me" method="post" enctype="text/plain">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">🧙‍♂️ Your Magical Name</label>
+                            <input type="text" id="name" name="name" required placeholder="What should I call you, fellow wizard?">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">✉️ Your Digital Owl Address</label>
+                            <input type="email" id="email" name="email" required placeholder="Where should my raven deliver the reply?">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">🎯 Quest Type</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Choose your adventure...</option>
+                            <option value="web-development">🌐 Web Development Wizardry</option>
+                            <option value="ai-ml">🤖 AI/ML Sorcery</option>
+                            <option value="blockchain">⛓️ Blockchain Alchemy</option>
+                            <option value="cybersecurity">🛡️ Digital Fortress Building</option>
+                            <option value="consultation">💡 Mystical Tech Consultation</option>
+                            <option value="collaboration">🤝 Epic Collaboration Quest</option>
+                            <option value="other">🌟 Something Extraordinarily Magical</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">💭 Your Vision Scroll</label>
+                        <textarea id="message" name="message" required placeholder="Tell me about your dream project! What kind of digital magic do you want to create? Don't hold back—I love ambitious ideas that make other developers say 'that's impossible!' 🚀"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="raven-btn">
+                            <span class="btn-icon">🐦‍</span>
+                            <span class="btn-text">Send Digital Raven</span>
+                            <span class="btn-magic"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Alternative Contact Methods -->
+            <div class="contact-alternatives">
+                <h3>🌟 Other Mystical Communication Channels</h3>
                 <div class="contact-methods">
-                    <button onclick="openContactModal()" class="contact-method contact-me-btn">
-                        📧 Contact Me Now!
-                    </button>
-                    <a href="mailto:ellylog.el@proton.me" class="contact-method">
-                        🐦‍⬛ Send Digital Raven
-                    </a>
-                    <a href="https://www.linkedin.com/in/elly-odhiambo-422125293/" class="contact-method">
+                    <a href="https://www.linkedin.com/in/elly-odhiambo-422125293/" target="_blank" class="contact-method linkedin">
                         💼 Professional Portal
                     </a>
-                    <a href="https://github.com/Elly-L/" target="_blank" class="contact-method">
+                    <a href="https://github.com/Elly-L/" target="_blank" class="contact-method github">
                         🐙 Code Repository
                     </a>
-                    <a href="./cv/Elly Odhiambo CV.pdf" download="Elly_Odhiambo_CV.pdf" class="contact-method">
+                    <a href="./cv/Elly Odhiambo CV.pdf" target="_blank" class="contact-method cv">
                         📄 Download CV Scroll
                     </a>
                 </div>
             </div>
         </div>
     </section>
-    
-    <script src="script.js"></script>
 </body>
 </html>
