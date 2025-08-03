@@ -431,6 +431,202 @@ section {
   }
 }
 
+/* Code font for special elements */
+.code-font {
+  font-family: "JetBrains Mono", monospace;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 8px;
+  border-radius: 5px;
+  color: var(--neon-green);
+}
+
+/* Rainbow animation for easter egg */
+@keyframes rainbow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Strategic Top Action Buttons */
+.top-action-buttons {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.top-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: 2px solid transparent;
+  backdrop-filter: blur(10px);
+  animation: shake 2s infinite ease-in-out;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cv-btn {
+  background: linear-gradient(135deg, var(--sunset-orange), var(--magic-pink));
+  color: white;
+  border-color: var(--sunset-orange);
+}
+
+.github-btn {
+  background: linear-gradient(135deg, var(--deep-space), var(--cosmic-purple));
+  color: var(--stardust);
+  border-color: var(--cosmic-purple);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+.btn-text {
+  font-family: "Fredoka", cursive;
+  white-space: nowrap;
+}
+
+.btn-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  animation: pulse-ring 2s infinite ease-out;
+}
+
+/* Shake animation for click-bait effect */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-2px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(2px);
+  }
+}
+
+/* Bounce animation for icons */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Pulse ring animation */
+@keyframes pulse-ring {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+
+/* Hover effects for top buttons */
+.top-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  animation: none; /* Stop shaking on hover */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.cv-btn:hover {
+  background: linear-gradient(135deg, var(--magic-pink), var(--sunset-orange));
+  border-color: var(--magic-pink);
+}
+
+.github-btn:hover {
+  background: linear-gradient(135deg, var(--cosmic-purple), var(--electric-blue));
+  border-color: var(--electric-blue);
+}
+
+.top-btn:hover .btn-icon {
+  animation: none;
+  transform: scale(1.2);
+}
+
+.top-btn:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Glowing effect */
+.top-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.top-btn:hover::before {
+  left: 100%;
+}
+
+/* Responsive updates for top buttons */
+@media (max-width: 768px) {
+  .top-action-buttons {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .top-btn {
+    font-size: 0.8rem;
+    padding: 10px 16px;
+  }
+
+  .btn-text {
+    display: none; /* Hide text on mobile, show only icons */
+  }
+
+  .btn-icon {
+    font-size: 1.5rem;
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero h1 {
@@ -454,24 +650,5 @@ section {
   }
   section {
     padding: 60px 20px;
-  }
-}
-
-/* Code font for special elements */
-.code-font {
-  font-family: "JetBrains Mono", monospace;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 2px 8px;
-  border-radius: 5px;
-  color: var(--neon-green);
-}
-
-/* Rainbow animation for easter egg */
-@keyframes rainbow {
-  0% {
-    filter: hue-rotate(0deg);
-  }
-  100% {
-    filter: hue-rotate(360deg);
   }
 }
